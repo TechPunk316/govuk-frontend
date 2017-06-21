@@ -16,7 +16,9 @@
     border-bottom: 1px solid $govuk-black;
 
     color: $govuk-black;
-    background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+    background-image: file-url("icon-arrow-left.png");
+    background-repeat: no-repeat;
+    background-position: 0 4px;
 
     font-family: $govuk-font-stack;
     @include font-smoothing;

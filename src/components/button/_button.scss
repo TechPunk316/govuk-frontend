@@ -89,7 +89,7 @@
   .govuk-c-button[disabled="disabled"],
   .govuk-c-button[disabled] {
     opacity: (.5);
-    background: $govuk-button-colour;
+    background-color: $govuk-button-colour;
 
     &:hover {
       background-color: $govuk-button-colour;
@@ -129,7 +129,7 @@
 
     width: 100%;
     height: 110%;
-    background: transparent;
+    background-color: transparent;
   }
 
   .govuk-c-button:active:before {
