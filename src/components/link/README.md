@@ -31,6 +31,13 @@ Code example(s)
 @@include('link.html')
 ```
 
+## Arguments
+
+| Name  | Type    | Default | Required  | Description
+|---    |---      |---      |---        |---
+| href  | string  |         | Yes       | The value of the link href attribute
+| text  | string  |         | Yes       | The link text
+
 <!--
 ## Installation
 
