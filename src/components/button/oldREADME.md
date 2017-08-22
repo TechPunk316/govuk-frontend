@@ -1,49 +1,36 @@
+# Button
+
+Button intro.
+
+## Guidance
+
+Guidance and documentation can be found on [GOV.UK Design System](linkgoeshere).
+
+## Demo
+
+Button [demo](button.html).
+
 ## Usage
 
-```
-
-
-
-
-<input class="govuk-c-button  "
-  value="Save and continue"
-  >
-
-
-
-
-
-
-<input class="govuk-c-button govuk-c-button--disabled "
-  value="Save and continue"
-  disabled="disabled" aria-disabled="true">
-
-
-
-
-
-
-<a class="govuk-c-button govuk-c-button--start " href="/" role="button">
-  Start now
-</a>
-
-
-
+Code example(s)
 
 ```
-
+@@include('button.html')
+```
 
 ## Nunjucks
 
 ```
-  {% from "button/macro.njk" import govukButton %}
+{% from "button/macro.njk" import govukButton %}
 
-{{ govukButton(classes="", text="Save and continue") }}
+Button
+{{ govukButton(classes="", value="Save and continue", type="submit") }}
 
-{{ govukButton(classes="", text="Save and continue", isDisabled="true") }}
+Disabled button
+{{ govukButton(classes="", value="Save and continue", type="submit", isDisabled="true") }}
 
-{{ govukButton(classes="", text="Start now", url="/", isStart="true") }}
-
+Start now button
+{{ govukButton(classes="", url="#", text="Start now", isStart="true") }}
 ```
 
 ## Arguments
@@ -59,6 +46,10 @@ Button
 | url        | string  |         | No       | Url that the hyperlink points to
 
 
-## NPM installation
+<!--
+## Installation
 
+```
 npm install --save @govuk-frontend/button
+```
+-->
