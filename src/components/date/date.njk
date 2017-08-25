@@ -1,26 +1,3 @@
-# Date
-
-Component for entering Day/Month/Year dates.
-
-## Guidance
-
-Guidance and documentation can be found on [GOV.UK Design System](linkgoeshere).
-
-## Demo
-
-Date [demo](date.html).
-
-## Usage
-
-Code example(s)
-
-```
-@@include('date.html')
-```
-
-## Nunjucks
-
-```
 {% from "date/macro.njk" import govukDate %}
 
 {{ govukDate(
@@ -142,27 +119,3 @@ Code example(s)
   ]
   )
 }}
-```
-
-## Arguments
-
-| Name                | Type   | Default | Required | Description
-|---                  |---     |---      |---       |---
-| fieldsetClasses     | string |         | No       | Optional additional classes
-| legendText          | string |         | Yes      | Legend text
-| legendHintText      | string |         | No       | Optional Legend hint text
-| legendErrorMessage  | string |         | No       | Optional Legend error message
-| classes             | string |         | No       | Optional additional classes
-| id                  | string |         | Yes      | Ids of date items
-| name                | string |         | Yes      | Names of date items
-| dateItems           | object |         | No       | dateItems object with name and error keys
-| dateItems.name      |        |         | No       | Name of date item - Day, Month and Year
-| dateItems.error     |        |         | No       | Set error for date item
-
-<!--
-## Installation
-
-```
-npm install --save @govuk-frontend/date
-```
--->
