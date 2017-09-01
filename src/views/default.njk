@@ -1,3 +1,4 @@
+{% if not isReadme %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,9 +49,11 @@
 </head>
 <body class="language-markup govuk-c-site-width-container">
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  {% endif%}
   {% block content %}
   This is the default content
   {% endblock %}
+  {% if not isReadme %}
   <script src="/js/govuk-frontend.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 <span class="govuk-c-debug-grid__toggler">Show page debug grid</span>
@@ -70,3 +73,4 @@
 </script>
 </body>
 </html>
+{% endif%}
