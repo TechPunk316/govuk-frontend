@@ -12,7 +12,6 @@ nunjucks.configure(views, {
   noCache: true,
   watch: true
 })
-
 app.set('view engine', 'njk')
 
 app.set('port', (process.env.PORT || 3000))
@@ -75,16 +74,6 @@ app.get('/examples*', function (req, res) {
   // })
   res.render('index')
 })
-
-var sassMiddleware = require('node-sass-middleware')
-app.use(sassMiddleware({
-    /* Options */
-    src: paths.globalScss,
-    dest: '/public',
-    debug: true,
-    outputStyle: 'compressed',
-    prefix: '/public'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
-}));
 // Note: you must place sass-middleware *before* `express.static` or else it will
 // not work.
 // app.use('/public', express.static(path.join(__dirname, 'public')));
