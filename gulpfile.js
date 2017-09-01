@@ -4,6 +4,11 @@ const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const taskListing = require('gulp-task-listing')
 const runsequence = require('run-sequence')
+const nunjucksRender = require('gulp-nunjucks-render')
+const rename = require('gulp-rename')
+const data = require('gulp-data')
+const tap = require('gulp-tap')
+const path = require('path')
 
 // Gulp sub-tasks
 require('./tasks/gulp/lint.js')
@@ -20,6 +25,35 @@ require('./tasks/gulp/preview-component-list.js')
 require('./tasks/gulp/preview-docs.js')
 require('./tasks/gulp/examples.js')
 require('./tasks/gulp/nunjucks-render.js')
+
+const vinylInfo = {}
+
+function getDataForFile (file) {
+  let finalData = {}
+  finalData = Object.assign(finalData, vinylInfo)
+  return finalData
+}
+
+const manageEnvironment = function (environment) {
+  environment.addGlobal('isReadme', 'true')
+}
+
+gulp.task('generate:readme', () => {
+  return gulp.src([paths.components + '**/index.njk'])
+  .pipe(tap(file => {
+    vinylInfo.componentName = path.dirname(file.path).split(path.sep).pop()
+  }))
+  .pipe(data(getDataForFile))
+  .pipe(nunjucksRender({
+    path: [paths.src + 'views', paths.components],
+    manageEnv: manageEnvironment
+  }))
+  .pipe(rename(function (path) {
+    path.basename = 'generated-README'
+    path.extname = '.md'
+  }))
+  .pipe(gulp.dest(paths.src + 'components/'))
+})
 
 // Build packages task -----------------
 // Prepare package folder for publishing
