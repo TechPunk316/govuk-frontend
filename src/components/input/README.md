@@ -52,51 +52,50 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-
-
-<label class="govuk-c-label " for="input-1">
+<pre>
+<code>
+  &lt;label class=&quot;govuk-c-label &quot; for=&quot;input-1&quot;&gt;
   National Insurance number
 
 
-</label>
+&lt;/label&gt;
 
 
-<input class="govuk-c-input " id="input-1" name="test-name" type="text" >
+&lt;input class=&quot;govuk-c-input &quot; id=&quot;input-1&quot; name=&quot;test-name&quot; type=&quot;text&quot; &gt;
 
 
 
 
-<label class="govuk-c-label " for="input-2">
+&lt;label class=&quot;govuk-c-label &quot; for=&quot;input-2&quot;&gt;
   National Insurance number
 
-    <span class="govuk-c-label__hint">It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.</span>
+    &lt;span class=&quot;govuk-c-label__hint&quot;&gt;It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.&lt;/span&gt;
 
-</label>
-
-
-<input class="govuk-c-input " id="input-2" name="test-name-2" type="text" >
+&lt;/label&gt;
 
 
+&lt;input class=&quot;govuk-c-input &quot; id=&quot;input-2&quot; name=&quot;test-name-2&quot; type=&quot;text&quot; &gt;
 
 
-<label class="govuk-c-label " for="input-3">
+
+
+&lt;label class=&quot;govuk-c-label &quot; for=&quot;input-3&quot;&gt;
   National Insurance number
 
-    <span class="govuk-c-label__hint">It’s on your National Insurance card, benefit letter, payslip or P60.
-    For example, ‘QQ 12 34 56 C’.</span>
+    &lt;span class=&quot;govuk-c-label__hint&quot;&gt;It’s on your National Insurance card, benefit letter, payslip or P60.
+    For example, ‘QQ 12 34 56 C’.&lt;/span&gt;
 
-    <span class="govuk-c-error-message ">
+    &lt;span class=&quot;govuk-c-error-message &quot;&gt;
   Error message goes here
-</span>
+&lt;/span&gt;
 
-</label>
+&lt;/label&gt;
 
 
-<input class="govuk-c-input govuk-c-input--error" id="input-3" name="test-name-3" type="text" >
+&lt;input class=&quot;govuk-c-input govuk-c-input--error&quot; id=&quot;input-3&quot; name=&quot;test-name-3&quot; type=&quot;text&quot; &gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

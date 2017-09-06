@@ -53,13 +53,14 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-<span class="govuk-c-error-message ">
+<pre>
+<code>
+  &lt;span class=&quot;govuk-c-error-message &quot;&gt;
   Error message goes here
-</span>
+&lt;/span&gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

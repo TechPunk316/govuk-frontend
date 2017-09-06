@@ -52,11 +52,12 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
+<pre>
+<code>
+  &lt;strong class=&quot;govuk-c-phase-tag &quot;&gt; Alpha&lt;/strong&gt;
+</code>
+</pre>
 
-<strong class="govuk-c-phase-tag "> Alpha</strong>
-
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

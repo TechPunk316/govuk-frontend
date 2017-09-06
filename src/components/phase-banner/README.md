@@ -52,19 +52,20 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
+<pre>
+<code>
+  &lt;div class=&quot;govuk-c-phase-banner &quot;&gt;
+  &lt;p class=&quot;govuk-c-phase-banner__content&quot;&gt;
+    &lt;strong class=&quot;govuk-c-phase-tag &quot;&gt; BETA&lt;/strong&gt;
 
-<div class="govuk-c-phase-banner ">
-  <p class="govuk-c-phase-banner__content">
-    <strong class="govuk-c-phase-tag "> BETA</strong>
+    &lt;span class=&quot;govuk-c-phase-banner__text&quot;&gt;
+      This is a new service – your &lt;a href=&quot;#&quot;&gt;feedback&lt;/a&gt; will help us to improve it.
+    &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code>
+</pre>
 
-    <span class="govuk-c-phase-banner__text">
-      This is a new service – your <a href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

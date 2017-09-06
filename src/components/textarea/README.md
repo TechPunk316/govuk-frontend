@@ -52,20 +52,19 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-
-
-<label class="govuk-c-label " for="textarea">
+<pre>
+<code>
+  &lt;label class=&quot;govuk-c-label &quot; for=&quot;textarea&quot;&gt;
   National Insurance number
 
 
-</label>
+&lt;/label&gt;
 
 
-<textarea class="govuk-c-textarea  " id="textarea" name="name" rows=" 5 "></textarea>
+&lt;textarea class=&quot;govuk-c-textarea  &quot; id=&quot;textarea&quot; name=&quot;name&quot; rows=&quot; 5 &quot;&gt;&lt;/textarea&gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

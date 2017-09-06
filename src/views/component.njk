@@ -4,6 +4,9 @@
 
 {% set componentName = componentPath %}
 {% set componentGuidanceLink = componentGuidanceLink | default('http://www.linktodesignsystem.com/' + componentName)%}
+{% set htmlMarkup %}
+  {% include "../components/"+ componentName +"/"+ componentName +".njk" ignore missing %}
+{% endset %}
 
 
 <h1 class="govuk-u-heading-36">
@@ -70,7 +73,16 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19">{% block componentHtmlUsageWriteup %}{% endblock %}</p>
+{% if not isReadme %}
 <pre><code>{% block componentHtmlUsage %}{{ componentHtmlFile }}{% endblock %}</code></pre>
+{% else %}
+<pre>
+<code>
+  {{ htmlMarkup | escape | trim }}
+</code>
+</pre>
+
+{% endif %}
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

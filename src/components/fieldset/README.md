@@ -53,15 +53,16 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-<fieldset class="govuk-c-fieldset ">
-  <legend class="govuk-c-fieldset__legend">
+<pre>
+<code>
+  &lt;fieldset class=&quot;govuk-c-fieldset &quot;&gt;
+  &lt;legend class=&quot;govuk-c-fieldset__legend&quot;&gt;
     Legend text goes here
-  </legend>
-</fieldset>
+  &lt;/legend&gt;
+&lt;/fieldset&gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

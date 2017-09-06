@@ -52,18 +52,18 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-
-<div class="govuk-c-legal-text ">
-  <span class="govuk-c-legal-text__icon govuk-u-circle" aria-hidden="true">!</span>
-  <strong class="govuk-c-legal-text__text">
-    <span class="govuk-c-legal-text__assistive">Warning</span>
+<pre>
+<code>
+  &lt;div class=&quot;govuk-c-legal-text &quot;&gt;
+  &lt;span class=&quot;govuk-c-legal-text__icon govuk-u-circle&quot; aria-hidden=&quot;true&quot;&gt;!&lt;/span&gt;
+  &lt;strong class=&quot;govuk-c-legal-text__text&quot;&gt;
+    &lt;span class=&quot;govuk-c-legal-text__assistive&quot;&gt;Warning&lt;/span&gt;
     You can be fined up to £5,000 if you don’t register.
-  </strong>
-</div>
+  &lt;/strong&gt;
+&lt;/div&gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>

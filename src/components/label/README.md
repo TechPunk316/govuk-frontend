@@ -52,42 +52,42 @@ app.use('/public', express.static(path.join(__dirname, '/node_modules/@govuk-fro
 
 <h2 class="govuk-u-heading-24">Quick start examples</h2>
 <p class="govuk-u-copy-19"></p>
-<pre><code>
-
-
-<label class="govuk-c-label " for="">
+<pre>
+<code>
+  &lt;label class=&quot;govuk-c-label &quot; for=&quot;&quot;&gt;
   National Insurance number
 
-    <span class="govuk-c-label__hint">It’s on your National Insurance card, benefit letter, payslip or P60.
-    For example, ‘QQ 12 34 56 C’.</span>
+    &lt;span class=&quot;govuk-c-label__hint&quot;&gt;It’s on your National Insurance card, benefit letter, payslip or P60.
+    For example, ‘QQ 12 34 56 C’.&lt;/span&gt;
 
-</label>
+&lt;/label&gt;
 
 
 
-<label class="govuk-c-label  govuk-c-label--bold " for="">
+&lt;label class=&quot;govuk-c-label  govuk-c-label--bold &quot; for=&quot;&quot;&gt;
   National Insurance number
 
-    <span class="govuk-c-label__hint">It’s on your National Insurance card, benefit letter, payslip or P60.
-    For example, ‘QQ 12 34 56 C’.</span>
+    &lt;span class=&quot;govuk-c-label__hint&quot;&gt;It’s on your National Insurance card, benefit letter, payslip or P60.
+    For example, ‘QQ 12 34 56 C’.&lt;/span&gt;
 
-</label>
+&lt;/label&gt;
 
 
 
-<label class="govuk-c-label " for="">
+&lt;label class=&quot;govuk-c-label &quot; for=&quot;&quot;&gt;
   National Insurance number
 
-    <span class="govuk-c-label__hint">It’s on your National Insurance card, benefit letter, payslip or P60.
-    For example, ‘QQ 12 34 56 C’.</span>
+    &lt;span class=&quot;govuk-c-label__hint&quot;&gt;It’s on your National Insurance card, benefit letter, payslip or P60.
+    For example, ‘QQ 12 34 56 C’.&lt;/span&gt;
 
-    <span class="govuk-c-error-message ">
+    &lt;span class=&quot;govuk-c-error-message &quot;&gt;
   Error message goes here
-</span>
+&lt;/span&gt;
 
-</label>
+&lt;/label&gt;
+</code>
+</pre>
 
-</code></pre>
 
 <h2 class="govuk-u-heading-24">If you are using Nunjucks</h2>
 <p class="govuk-u-copy-19">To use a macro, follow the below code examples:</p>
