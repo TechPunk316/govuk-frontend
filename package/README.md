@@ -1,44 +1,72 @@
-# GOV.UK Frontend - All components
+# GOV.UK Frontend
 
-All of the components in GOV.UK Frontend, in a single package.
+GOV.UK Frontend contains the code you need to start building a user interface
+for government platforms and services.
 
-## Guidance
+See live examples of GOV.UK Frontend components, and guidance on when to use
+them in your service, in the [GOV.UK Design
+System](https://govuk-design-system-production.cloudapps.digital/).
 
-Find out when to use the Back link component in your service in the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital).
+## Contact the team
 
-## Dependencies
-
-To consume all components you must be running npm version 5 or above.
-
-## Installation
-
-    npm install --save govuk-frontend
+GOV.UK Frontend is maintained by a team at Government Digital Service. If you want to know more about GOV.UK Frontend, please email the [Design System
+team](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) or get in touch with them on [Slack](https://ukgovernmentdigital.slack.com/messages/govuk-design-system).
 
 ## Requirements
 
-### Build tool configuration
+To use GOV.UK Frontend with NPM you must:
 
-When compiling the Sass files you'll need to define includePaths to reference the node_modules directory. Below is a sample configuration using gulp
+Install the long-term support (LTS) version of [Node.js](https://nodejs.org/en/), which includes NPM. The minimum version of Node required is 8.6.0.
 
-    .pipe(sass({
-      includePaths: 'node_modules/'
-    }))
+## Installation
 
-### Static asset path configuration
+To install GOV.UK Frontend, run:
 
-To show the button image you need to configure your app to show these assets. Below is a sample configuration using Express js:
+```
+npm install --save govuk-frontend
+```
 
-    app.use('/assets', express.static(path.join(__dirname, '/node_modules/govuk-frontend/assets')))
+## Importing styles
 
-### Setting up Nunjucks views and paths
+You need to import the GOV.UK Frontend styles into the main Sass file in your
+project. You should place the below code before your own Sass rules (or Sass
+imports) if you want to override GOV.UK Frontend with your own styles.
 
-Below is an example setup using express configure views:
+To import add the below to your Sass file:
 
-    nunjucks.configure('node_modules/govuk-frontend/components/', {
-      autoescape: true,
-      cache: false,
-      express: app
-    })
+  ```CSS
+  @import "node_modules/govuk-frontend/all";
+  ```
+
+[More details](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-styles)
+
+## Importing JavaScript
+
+Some of the JavaScript included in GOV.UK Frontend improves the usability and
+accessibility of the components. You should make sure that you are importing and
+initialising it in your application to ensure that all users can properly use it
+successfully.
+
+You can include Javascript for all components either by copying the `all.js` from `node_modules/govuk-frontend` into your application or referencing the file directly:
+
+```js
+<script src="<path-to-govuk-frontend-all-file>/all.js"></script>
+```
+Next you need to initialise the script by adding:
+
+```js
+<script>window.GOVUKFrontend.initAll()</script>
+```
+
+[More details and advanced options](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-javascript)
+
+
+## Import assets
+
+In order to import GOV.UK Frontend images and fonts to your project, you should configure your application to reference or copy the relevant GOV.UK Frontend assets.
+
+[More details](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#import-assets)
+
 
 ## Getting updates
 
@@ -51,10 +79,14 @@ To update the latest version run:
     npm update govuk-frontend
 
 
-## Contribution
+## Licence
 
-Guidelines can be found at [on our Github repository.](https://github.com/alphagov/govuk-frontend/blob/master/CONTRIBUTING.md "link to contributing guidelines on our github repository")
+Unless stated otherwise, the codebase is released under the MIT License. This
+covers both the codebase and any sample code in the documentation. The
+documentation is &copy; Crown copyright and available under the terms of the
+Open Government 3.0 licence.
 
-## License
+## Contribution guidelines
 
-MIT
+If you want to help us build GOV.UK Frontend, view our [contribution
+guidelines](CONTRIBUTING.md).
