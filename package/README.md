@@ -14,7 +14,7 @@ team](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) or get i
 
 ## Requirements
 
-To use GOV.UK Frontend with NPM you must:
+To use GOV.UK Frontend with [NPM](https://www.npmjs.com) you must:
 
 Install the long-term support (LTS) version of [Node.js](https://nodejs.org/en/), which includes NPM. The minimum version of Node required is 8.6.0.
 
@@ -29,7 +29,7 @@ npm install --save govuk-frontend
 ## Importing styles
 
 You need to import the GOV.UK Frontend styles into the main Sass file in your
-project. You should place the below code before your own Sass rules (or Sass
+project. Place the code below before your own Sass rules (or Sass
 imports) if you want to override GOV.UK Frontend with your own styles.
 
 To import add the below to your Sass file:
@@ -38,13 +38,13 @@ To import add the below to your Sass file:
   @import "node_modules/govuk-frontend/all";
   ```
 
-[More details](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-styles)
+[More details on importing styles are available here](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-styles)
 
 ## Importing JavaScript
 
 Some of the JavaScript included in GOV.UK Frontend improves the usability and
 accessibility of the components. You should make sure that you are importing and
-initialising it in your application to ensure that all users can properly use it
+initialising Javascript in your application to ensure that all users can use it
 successfully.
 
 You can include Javascript for all components either by copying the `all.js` from `node_modules/govuk-frontend` into your application or referencing the file directly:
@@ -58,14 +58,14 @@ Next you need to initialise the script by adding:
 <script>window.GOVUKFrontend.initAll()</script>
 ```
 
-[More details and advanced options](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-javascript)
+[More details on importing Javascript and advanced options are available here](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#importing-javascript)
 
 
-## Import assets
+## Importing assets
 
 In order to import GOV.UK Frontend images and fonts to your project, you should configure your application to reference or copy the relevant GOV.UK Frontend assets.
 
-[More details](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#import-assets)
+[More details on importing assets are available here](https://github.com/alphagov/govuk-frontend/blob/master/docs/installation/installing-with-npm.md#import-assets)
 
 
 ## Getting updates
